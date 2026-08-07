@@ -1,0 +1,23 @@
+SELECT * FROM EMPLOYEE
+
+--26. Give city wise maximum and minimum salary of female employees. 
+SELECT CITY,MAX(SALARY),MIN(SALARY) FROM EMPLOYEE WHERE GENDER = 'FEMALE' GROUP BY CITY
+SELECT * FROM EMPLOYEE
+
+--27. Calculate department, city, and gender wise average salary. 
+SELECT DEPARTMENT,AVG(SALARY) FROM EMPLOYEE GROUP BY DEPARTMENT
+SELECT CITY,AVG(SALARY) FROM EMPLOYEE GROUP BY CITY
+SELECT GENDER,AVG(SALARY) FROM EMPLOYEE GROUP BY GENDER
+
+--28. Display the difference between the highest and lowest salaries. Label the column DIFFERENCE. 
+SELECT (MAX(SALARY)-MIN(SALARY)) FROM EMPLOYEE 
+SELECT * FROM EMPLOYEE
+
+--29. Display sum of salaries of department wise where department name consist 5 letter. 
+SELECT DEPARTMENT,SUM(SALARY) FROM EMPLOYEE WHERE DEPARTMENT LIKE '_____' GROUP BY DEPARTMENT
+SELECT * FROM EMPLOYEE
+
+--30. Find the Maximum salary department & city wise in which city name starts with ‘R’.
+SELECT CITY,MAX(SALARY) FROM EMPLOYEE WHERE CITY LIKE  'R%' GROUP BY CITY
+SELECT DEPARTMENT,MAX(SALARY) FROM EMPLOYEE WHERE CITY LIKE 'R%' GROUP BY DEPARTMENT
+SELECT * FROM EMPLOYEE

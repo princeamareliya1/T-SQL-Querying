@@ -1,0 +1,16 @@
+--24. Display FIRSTNAME without first and last character. 
+SELECT  SUBSTRING(FIRSTNAME,2,LEN(FIRSTNAME)-2) FROM EMPLOYEE
+
+SELECT LEN(FIRSTNAME) FROM EMPLOYEE
+
+--25. Display FIRSTNAME after replacing vowels with '*'. 
+SELECT TRANSLATE(FIRSTNAME,'AEIOU','*****') FROM EMPLOYEE 
+
+--26. Display employees where combined length of FIRSTNAME and LASTNAME is greater than 10. 
+SELECT LEN(CONCAT(FIRSTNAME,LASTNAME)) FROM EMPLOYEE
+
+--27. Display FIRSTNAME and its reverse. 
+SELECT FIRSTNAME,REVERSE(FIRSTNAME) FROM EMPLOYEE
+
+--28. Display employees whose FIRSTNAME and LASTNAME start with same character using LEFT() 
+SELECT FIRSTNAME,LASTNAME FROM EMPLOYEE WHERE LEFT(FIRSTNAME,1) = LEFT(LASTNAME,1)
